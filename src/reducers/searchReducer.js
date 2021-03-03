@@ -1,4 +1,4 @@
-import { SEARCH_MOVIE } from '../actions/types';
+import { SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING } from '../actions/types';
 
 //initial states of our app. Reducer is recognizing the action by its type. All the types of our actions is stored in actions/types
 const initialState = {
@@ -10,7 +10,7 @@ const initialState = {
 };
 
 //
-export default function tinker(state = initialState, action) {
+export default function obtain(state = initialState, action) {
   //will test the action type. Depending on the action type it will set the value of that action which is the payload(data coming from the action) into specific states.
   switch (action.type) {
     case SEARCH_MOVIE: //If the action type is SEARCH_MOVIE,
@@ -18,6 +18,23 @@ export default function tinker(state = initialState, action) {
         ...state,
         text: action.payload, //will return the text state from the searchAction.js
         loading: false,
+      };
+    case FETCH_MOVIES: //If the action type is SEARCH_MOVIE,
+      return {
+        ...state,
+        movies: action.payload, //will return the text state from the searchAction.js
+        loading: false,
+      };
+    case FETCH_MOVIE:
+      return {
+        ...state,
+        movie: action.payload,
+        loading: false,
+      };
+    case LOADING:
+      return {
+        ...state,
+        loading: true,
       };
     default:
       return state;
