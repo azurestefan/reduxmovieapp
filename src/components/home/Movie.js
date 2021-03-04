@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
 import { fetchMovie, setLoading } from '../../actions/searchActions';
-
 import Spinner from '../layout/Spinner';
 
 export class Movie extends Component {
@@ -15,13 +13,13 @@ export class Movie extends Component {
     const { loading, movie } = this.props;
 
     let movieInfo = (
-      <div className='container'>
+      <main className='container'>
         <div className='row'>
-          <div className='col-md-4 card card-body'>
+          <figure className='col-md-4 card card-body'>
             <img src={movie.Poster} className='thumbnail' alt='Poster' />
-          </div>
-          <div className='col-md-8'>
-            <h2 className='mb-4'>{movie.Title}</h2>
+          </figure>
+          <article className='col-md-8'>
+            <header className='mb-4'>{movie.Title}</header>
             <ul className='list-group'>
               <li className='list-group-item'>
                 <strong>Genre:</strong> {movie.Genre}
@@ -45,11 +43,11 @@ export class Movie extends Component {
                 <strong>Actors:</strong> {movie.Actors}
               </li>
             </ul>
-          </div>
+          </article>
         </div>
-        <div className='row'>
+        <article className='row'>
           <div className='card card-body bg-dark my-5 text-light'>
-            <div className='col-md-12'>
+            <aside className='col-md-12'>
               <h3>About </h3>
               {movie.Plot}
               <hr />
@@ -59,10 +57,10 @@ export class Movie extends Component {
               <Link to='/' className='btn btn-default text-light'>
                 Go Back To Search
               </Link>
-            </div>
+            </aside>
           </div>
-        </div>
-      </div>
+        </article>
+      </main>
     );
 
     let content = loading ? <Spinner /> : movieInfo;
