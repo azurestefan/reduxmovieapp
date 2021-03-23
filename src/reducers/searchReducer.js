@@ -10,7 +10,7 @@ const initialState = {
 };
 
 //
-export default function obtain(state = initialState, action) {
+export default function searchReducer(state = initialState, action) {
   //will test the action type. Depending on the action type it will set the value of that action which is the payload(data coming from the action) into specific states.
   switch (action.type) {
     case SEARCH_MOVIE: //If the action type is SEARCH_MOVIE,
