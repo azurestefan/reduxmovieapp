@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+.App {
+  font-family: 'Raleway', sans-serif;
+}
+
 #movies img,
 #movie img {
   width: 100%;
@@ -7,9 +13,6 @@
 }
 #react-logo {
   color: #00d8ff;
-}
-#imdb-logo {
-  color: #f5de50;
 }
 @media (min-width: 960px) {
   #movies .col-md-3 .well {

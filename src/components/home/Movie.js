@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchMovie, setLoading } from '../../actions/searchActions';
 import Spinner from '../layout/Spinner';
-import ImageLoader from './ImageLoader';
 
 export class Movie extends Component {
   componentDidMount() {

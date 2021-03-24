@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <header>
-      <nav className='navbar navbar-light bg-dark mb-5'>
+      <nav className='navbar navbar-light bg-dark mb-5 w-100'>
         <div className='container'>
           <div className='navbar-header'>
             <Link className='navbar-brand text-white text-lg brand-text' to='/'>
-              FindMoviesApp
+              Movie Explorer
             </Link>
           </div>
           <ul className='navbar-nav ml-auto text-light d-inline-block'>
