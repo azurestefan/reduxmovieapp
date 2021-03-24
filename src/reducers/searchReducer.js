@@ -19,10 +19,10 @@ export default function searchReducer(state = initialState, action) {
         text: action.payload, //will return the text state from the searchAction.js
         loading: false,
       };
-    case FETCH_MOVIES: //If the action type is SEARCH_MOVIE,
+    case FETCH_MOVIES: 
       return {
         ...state,
-        movies: action.payload, //will return the text state from the searchAction.js
+        movies: action.payload, 
         loading: false,
       };
     case FETCH_MOVIE:

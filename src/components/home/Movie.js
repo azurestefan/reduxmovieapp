@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchMovie, setLoading } from '../../actions/searchActions';
 import Spinner from '../layout/Spinner';
+import ImageLoader from './ImageLoader';
 
 export class Movie extends Component {
   componentDidMount() {
@@ -11,12 +12,13 @@ export class Movie extends Component {
   }
   render() {
     const { loading, movie } = this.props;
+    let imgSrc = movie.Poster === 'N/A' ? 'https://via.placeholder.com/295x295' : movie.Poster;
 
     let movieInfo = (
       <main className='container'>
         <div className='row'>
           <figure className='col-md-4 card card-body'>
-            <img src={movie.Poster} className='thumbnail' alt='Poster' />
+            <img src={imgSrc} className='thumbnail' alt='Poster' />
           </figure>
           <article className='col-md-8'>
             <header className='mb-4'>{movie.Title}</header>

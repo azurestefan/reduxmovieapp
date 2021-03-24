@@ -17,7 +17,7 @@ export class SearchForm extends Component {
       <div className='jumbotron jumbotron-fluid mt-5 text-center'>
         <div className='container'>
           <h1 className='display-4 mb-3'>
-            <i className='fa fa-search fa-xs' /> Search for a movie ,TV series ..
+            <i className='fa fa-search fa-xs' /> Search for movies
           </h1>
           <form id='searchForm' onSubmit={this.onSubmit}>
             <input type='text' className='form-control' name='searchText' placeholder='Search Movies, TV Series ...' onChange={this.onChange} />
